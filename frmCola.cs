@@ -16,5 +16,18 @@ namespace pryED_CapelloBruno
         {
             InitializeComponent();
         }
+
+        clsCola objCola = new clsCola();
+        clsNodo objNodo = new clsNodo();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            objNodo.Nombre = txtNombre.Text;
+            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            objNodo.Tramite = txtTramite.Text;
+
+            objCola.Agregar(objNodo);
+            objCola.Recorrer(lbListado);
+        }
     }
 }

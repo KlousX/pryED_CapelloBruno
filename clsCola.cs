@@ -42,5 +42,22 @@ namespace pryED_CapelloBruno
                 aux = aux.siguiente;
             }
         }
+
+        public void RecorrerDGV(DataGridView dgvListado)
+        {
+            clsNodo aux = Primero;
+
+            dgvListado.Rows.Clear();
+
+            while (aux != null)
+            {
+                dgvListado.Rows.Add(
+                    aux.Codigo,
+                    aux.Nombre, 
+                    aux.Tramite
+                    );
+                aux = aux.siguiente;
+            }
+        }
     }
 }

@@ -33,10 +33,11 @@ namespace pryED_CapelloBruno
             objCola.Recorrer(lbListado);
             objCola.RecorrerDGV(dgvListado);
 
+            //el método .Clear() no ocupa lugar en la memoria, en cambio el "" si. Conviene el .Clear()
             txtCodigo.Clear();
             txtTramite.Clear();
             txtNombre.Clear();
-            txtCodigo.Focus();
+            txtCodigo.Focus();  
         }
     }
 }

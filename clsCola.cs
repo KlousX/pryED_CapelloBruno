@@ -7,8 +7,12 @@ using System.Windows.Forms;
 
 namespace pryED_CapelloBruno
 {
+    //internal es el medioentre public y private, tiene cierta privacidad para que no puedan entrar todos pero puedo usar
+    //public en los métodos
     internal class clsCola
     {
+
+        //Atributos de la clase cola, cualidades de la clase nodo
         private clsNodo primero;
         private clsNodo ultimo;
 
@@ -29,7 +33,7 @@ namespace pryED_CapelloBruno
             }
         }
 
-        //ListBox es lo que voy a recibir, lbLista es el nombre que le voy a dar al ListBox que recibo
+        //ListBox es el tipo de obj que recibo, lbLista es el nombre que le voy a dar al obj que recibo
         public void Recorrer(ListBox lbListado)
         {
             clsNodo aux = Primero;

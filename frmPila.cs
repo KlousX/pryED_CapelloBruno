@@ -29,7 +29,7 @@ namespace pryED_CapelloBruno
             objNodo.Tramite = txtTramite.Text;
             objNodo.siguiente = null;
 
-            objPila.AgregarPila(objNodo);
+            objPila.AgregarPilaAnterior(objNodo);
             objPila.Recorrer(lbListado);
             objPila.RecorrerDgv(dgvListado);
 

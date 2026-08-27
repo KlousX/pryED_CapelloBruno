@@ -12,9 +12,8 @@ namespace pryED_CapelloBruno
         private string nombre;
         private string tramite;
         
-        //Creación del nodo
+        //Creamos las felchas del siguiente y anterior
         public clsNodo siguiente;
-
         public clsNodo anterior;
 
         public int Codigo { get => codigo; set => codigo = value; }

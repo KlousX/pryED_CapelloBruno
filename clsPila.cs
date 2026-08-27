@@ -33,6 +33,20 @@ namespace pryED_CapelloBruno
             
         }
 
+        public void AgregarPilaAnterior(clsNodo Nuevo)
+        {
+
+            if (Primero == null)
+            {
+                Primero = Nuevo;
+            }
+            else
+            {
+                Primero.anterior = Nuevo;
+                Primero = Nuevo;
+            }
+        }
+
         public void Recorrer(ListBox lbListado)
         {
             clsNodo aux = Primero;

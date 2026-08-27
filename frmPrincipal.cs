@@ -34,5 +34,11 @@ namespace pryED_CapelloBruno
             frmPrincipal cerrar = new frmPrincipal();
             cerrar.Close();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila Pila = new frmPila();
+            Pila.ShowDialog();
+        }
     }
 }

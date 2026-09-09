@@ -25,7 +25,7 @@ namespace pryED_CapelloBruno
 
         private void datosDelDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDatosDesarrollador Datos = new frmDatosDesarrollador();
+            frmLista Datos = new frmLista();
             Datos.ShowDialog();
         }
 

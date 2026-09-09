@@ -63,5 +63,19 @@ namespace pryED_CapelloBruno
                 aux = aux.siguiente;
             }
         }
+
+        public void Eliminar()
+        {
+            if (Primero != null)
+            {
+                Primero = Primero.siguiente;
+
+                if (Primero == null)
+                {
+                    Ultimo = null;
+                }
+            }
+            
+        }
     }
 }

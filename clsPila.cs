@@ -30,7 +30,7 @@ namespace pryED_CapelloBruno
                 //Asigno el nuevo nodo a Primero
                 Primero = Nuevo;
             }
-            
+
         }
 
         public void AgregarPilaAnterior(clsNodo Nuevo)

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
     <Compile Include="frmCola.cs">
@@ -55,11 +56,11 @@
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDatosDesarrollador.cs">
+    <Compile Include="frmLista.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDatosDesarrollador.Designer.cs">
-      <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    <Compile Include="frmLista.Designer.cs">
+      <DependentUpon>frmLista.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
@@ -78,8 +79,8 @@
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatosDesarrollador.resx">
-      <DependentUpon>frmDatosDesarrollador.cs</DependentUpon>
+    <EmbeddedResource Include="frmLista.resx">
+      <DependentUpon>frmLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>

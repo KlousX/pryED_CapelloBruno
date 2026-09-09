@@ -39,5 +39,30 @@ namespace pryED_CapelloBruno
             txtNombre.Clear();
             txtCodigo.Focus();  
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (objCola.Primero == null)
+            {
+                objCola.Eliminar();
+
+                objCola.Recorrer(lbListado);
+                objCola.RecorrerDGV(dgvListado);
+            }
+
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+        }
+
+        private void dgvListado_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                lblMuestraCodigo.Text = dgvListado.Rows[e.RowIndex].Cells[0].Value.ToString();
+                lblMuestraNombre.Text = dgvListado.Rows[e.RowIndex].Cells[1].Value.ToString();
+                lblMuestraTramite.Text = dgvListado.Rows[e.RowIndex].Cells[2].Value.ToString();
+            }
+        }
     }
 }

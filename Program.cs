@@ -16,7 +16,7 @@ namespace pryED_CapelloBruno
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPila());
+            Application.Run(new frmPrincipal());
         }
     }
 }

@@ -42,10 +42,57 @@ namespace pryED_CapelloBruno
             }
         }
 
-        public void Recorrer(DataGridView grilla)
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo)
+            {
+                Primero = Primero.siguiente;
+            }
+            else
+            {
+                clsNodo ant = Primero;
+                clsNodo aux = Primero;
+                while (aux.Codigo != Codigo)
+                {
+                    ant = aux;
+                    aux = aux.siguiente;
+                }
+                ant.siguiente = aux.siguiente;
+            }
+        }
+        
+        public void RecorrerDGV(DataGridView dgv)
         {
             clsNodo aux = Primero;
-            grilla.Rows.Clear();
+            dgv.Rows.Clear();
+            while (aux != null)
+            {
+                dgv.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.siguiente;
+            }
+        }
+
+        public void RecorrerLista(ListBox lista)
+        {
+            clsNodo aux = Primero;
+            lista.Items.Clear();
+            
+            while (aux != null)
+            {
+                lista.Items.Add(aux.Codigo + " " + aux.Nombre + " " + aux.Tramite);
+                aux = aux.siguiente;
+            }
+        }
+
+        public void RecorrerCombo(ComboBox combo)
+        {
+            clsNodo aux = Primero;
+            combo.Items.Clear();
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Codigo);
+                aux = aux.siguiente;
+            }
         }
     }
 }

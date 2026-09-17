@@ -16,5 +16,59 @@ namespace pryED_CapelloBruno
         {
             InitializeComponent();
         }
+
+        clsListaSimple ListaSimple = new clsListaSimple();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo Persona = new clsNodo();
+            Persona.Codigo = Convert.ToInt32(txtCodigo.Text);
+            Persona.Nombre = txtNombre.Text;
+            Persona.Tramite = txtTramite.Text;
+
+            ListaSimple.Agregar(Persona);
+            LosRecorrer();
+            ListaSimple.Eliminar(Convert.ToInt32(txtCodigo.Text));
+        }
+
+        private void LimpiarTodo()
+        {
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+            cboCodigo.SelectedIndex = -1;
+
+            LosRecorrer();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (cboCodigo.SelectedItem != null)
+            {
+                try
+                {
+                    ListaSimple.Eliminar(Convert.ToInt32(cboCodigo.SelectedItem));
+                    MessageBox.Show("Eliminado correctamente");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar: " + ex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningún valor a eliminar");
+            }
+            LimpiarTodo();
+        }
+
+        private void LosRecorrer()
+        {
+            ListaSimple.RecorrerLista(lbListado);
+            ListaSimple.RecorrerCombo(cboCodigo);
+            ListaSimple.RecorrerDGV(dgvListado);
+        }
+
+        
     }
 }

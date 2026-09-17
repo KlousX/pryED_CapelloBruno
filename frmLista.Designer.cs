@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLista));
             this.picPila = new System.Windows.Forms.PictureBox();
             this.gbEliminarElemento = new System.Windows.Forms.GroupBox();
+            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
             this.gbNuevoElemento = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,6 @@
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbListado = new System.Windows.Forms.ListBox();
-            this.cboCodigo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPila)).BeginInit();
             this.gbEliminarElemento.SuspendLayout();
             this.gbNuevoElemento.SuspendLayout();
@@ -78,6 +78,14 @@
             this.gbEliminarElemento.TabStop = false;
             this.gbEliminarElemento.Text = "Elemento a Eliminar";
             // 
+            // cboCodigo
+            // 
+            this.cboCodigo.FormattingEnabled = true;
+            this.cboCodigo.Location = new System.Drawing.Point(83, 30);
+            this.cboCodigo.Name = "cboCodigo";
+            this.cboCodigo.Size = new System.Drawing.Size(121, 21);
+            this.cboCodigo.TabIndex = 4;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Azure;
@@ -87,6 +95,7 @@
             this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigoEliminar
             // 
@@ -124,6 +133,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -229,14 +239,6 @@
             this.lbListado.Name = "lbListado";
             this.lbListado.Size = new System.Drawing.Size(216, 173);
             this.lbListado.TabIndex = 15;
-            // 
-            // cboCodigo
-            // 
-            this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(83, 30);
-            this.cboCodigo.Name = "cboCodigo";
-            this.cboCodigo.Size = new System.Drawing.Size(121, 21);
-            this.cboCodigo.TabIndex = 4;
             // 
             // frmLista
             // 

@@ -42,7 +42,7 @@ namespace pryED_CapelloBruno
             }
             else
             {
-                Primero.anterior = Nuevo;
+                Primero.Anterior = Nuevo;
                 Primero = Nuevo;
             }
         }
